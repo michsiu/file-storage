@@ -1,0 +1,20 @@
+CryptoJS Start
+dowImage 07021fcbfe6c5638decb8a330e97102e
+dowJson 07021fcbfe6c5638decb8a330e97102e
+updJSONDict 07021fcbfe6c5638decb8a330e97102e
+del https://api.github.com/repos/michsiu/file-storage/contents/WhiskImages/07021fcbfe6c5638decb8a330e97102e.jpeg
+del https://api.github.com/repos/michsiu/liblib/contents/WhiskTasks/07021fcbfe6c5638decb8a330e97102e.json
+https://api.github.com/repos/michsiu/liblib/contents/WhiskTasks/CAMaJDAwY2JiZDBiLTE1ZDItNDlhOC04MGRhLWYwMWYzMTk3NTJiZCIDQ0FFKiRiZTc3ZTAyNi1jMjg4LTRhNDQtYTg5MS1iZjA0ZGU3YmZiYmQ.json Upload File Failed:
+{
+	"message": "Invalid request.\n\n\"sha\" wasn't supplied.",
+	"status": "422",
+	"documentation_url": "https://docs.github.com/rest/repos/contents#create-or-update-file-contents"
+}
+https://api.github.com/repos/michsiu/file-storage/contents/WhiskImages/CAMaJDAwY2JiZDBiLTE1ZDItNDlhOC04MGRhLWYwMWYzMTk3NTJiZCIDQ0FFKiRiZTc3ZTAyNi1jMjg4LTRhNDQtYTg5MS1iZjA0ZGU3YmZiYmQ.jpeg Upload File Failed:
+{
+	"message": "Invalid request.\n\n\"sha\" wasn't supplied.",
+	"status": "422",
+	"documentation_url": "https://docs.github.com/rest/repos/contents#create-or-update-file-contents"
+}
+updDict CAMaJDAwY2JiZDBiLTE1ZDItNDlhOC04MGRhLWYwMWYzMTk3NTJiZCIDQ0FFKiRiZTc3ZTAyNi1jMjg4LTRhNDQtYTg5MS1iZjA0ZGU3YmZiYmQ
+Mission 07021fcbfe6c5638decb8a330e97102e Completed
