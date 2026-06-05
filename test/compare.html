@@ -8,6 +8,7 @@
 pageDict = pageDict
 a=词典
 
+
 a.data.list.sort((a, b) => {
   // 将 createTime 转为时间戳进行比较
   return new Date(b.createTime) - new Date(a.createTime);
@@ -20,24 +21,22 @@ async function getImageInfo(data,index) {
 
   topRightInfo = index + 1
   
-imgId = data.id
+  imgId = data.id
   outputId = data.outputId
-  imgUrl = data.originalImageId
+  generateId = data.generateId
+  imgUrl = data.originalImageUrl || data.imageUrl
   width = data.width
   height = data.height
+  generateType = data.generateType
+  taskParam = data.taskParam
+  createTime = data.createTime
+
   param = data.param
   userId = data.userId
-  createTime = data.createTime
+
   prompt_ = param.prompt
   negativePrompt = param.negativePrompt
-  seed = param.seed
-  generateId = param.generateId
-  generateType = param.generateType
-  denoisingStrength = param.denoisingStrength
   metainformation = param.metainformation
-  samplingMethod = param.samplingMethod
-  samplingStep = param.samplingStep
-  cfgScale = param.cfgScale
   mixModels = param.mixModels
   mixModelInfo = [];
   for (let i = 0; i < mixModels.length; i++) {
@@ -64,16 +63,14 @@ ${mixModelInfo}
 <br><br>
 Size:${width}x${height}
 <br>
-Seed:${seed}
-<br>
 GenerateId:${generateId}
-<br>
-DenoisingStrength:${denoisingStrength}
 <br>
 GenerateType:${generateType}
 <br><br>
 ${imgId}
 `
+
+
 
   imgUrloSS = imgUrl+'?image_process=format,webp&x-oss-process=image/resize,w_1000,m_lfit,format,webp'
 
@@ -97,18 +94,13 @@ ${imgId}
     outputId: outputId,
     imgUrl: imgUrl,
     width: width,
+    userId: userId,
     height: height,
     prompt: prompt_,
     negativePrompt: negativePrompt,
-    seed: seed,
-    userId: userId,
     generateId: generateId,
-    denoisingStrength: denoisingStrength,
     generateType: generateType,
-    metainformation: metainformation,
-    samplingMethod: samplingMethod,
-    samplingStep: samplingStep,
-    cfgScale: cfgScale,
+    taskParam: taskParam,
     imgHtml: imgHtml,
     pageDict:pageDict,
     createTime:createTime
@@ -135,4 +127,4 @@ Promise.all(dataList.map((data,index)=>getImageInfo(data,index))).then(()=>{
 })
 </script>
 </body>
-</htm>
+</html>
